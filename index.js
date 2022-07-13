@@ -13,6 +13,8 @@ app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true }))
 
 //endpoints
+app.use('/api/auth', require('./routes/auth'))
+
 app.get('/', (req, res)=>{
     res.send('Hello, world!');
 })
